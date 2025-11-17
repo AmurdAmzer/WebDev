@@ -16,5 +16,6 @@ redButton.addEventListener('click', function(e){
 });
 
 randomButton.addEventListener('click', function(e){
-    document.body.style.backgroundColor = 'violet';
+    console.log('Random Color Button Clicked');
+    document.body.style.backgroundColor = 'yellow';
 });
