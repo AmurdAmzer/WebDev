@@ -14,5 +14,12 @@ function calculateAverage(num1, num2, num3) {
 
   button.addEventListener('click', function() {
     console.log("Button clicked!");
-    
+
+    // Get values from input fields
+    const score1 = number(document.getElementById('num1').value)
+    const score2 = number(document.getElementById('num2').value)
+    const score3 = number(document.getElementById('num3').value)
+
+    alert("Your average score is: " + average);
+
   });
