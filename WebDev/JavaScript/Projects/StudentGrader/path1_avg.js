@@ -14,4 +14,5 @@ function calculateAverage(num1, num2, num3) {
 
   button.addEventListener('click', function() {
     console.log("Button clicked!");
+    
   });
