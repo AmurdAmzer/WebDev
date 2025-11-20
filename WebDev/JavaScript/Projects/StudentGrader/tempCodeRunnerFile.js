@@ -20,8 +20,10 @@ function calculateAverage(num1, num2, num3) {
     const score2 = Number(document.getElementById('num2').value)
     const score3 = Number(document.getElementById('num3').value)
 
+    // Calculate Average
     const average = calculateAverage(score1, score2, score3);
 
+    // Show result in alert
     alert("Your average score is: " + average);
 
   });
