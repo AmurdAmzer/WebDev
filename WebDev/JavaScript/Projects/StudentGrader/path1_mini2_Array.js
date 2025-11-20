@@ -15,3 +15,9 @@ return average;
 // Test it
 console.log(calculateAverage([80, 90, 85])); // Should print 85
 
+const addScoreButton = document.getElementById('addScoreBtn');
+const averageButton = documnet.getElementById('averageBtn');
+
+addScoreButton.addEventListener('click', function(e){
+
+})
