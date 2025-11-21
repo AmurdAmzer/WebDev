@@ -1,7 +1,11 @@
 
+// Create an empty array to store all scores entered by the user
+const scores = [];
+
+// Function that accepts an array of numbers and returns the average
 function calculateAverage(scores){
 // TODO: Calculate the average of all numbers in the array
-const scores = [];
+
 let sum = 0;
 for (let i=0; i<scores.length; i++){
     sum = sum + scores[i];
