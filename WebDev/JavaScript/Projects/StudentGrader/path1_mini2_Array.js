@@ -48,10 +48,16 @@ averageButton.addEventListener('click', function(){
     // Console log to verify button click
     console.log("Average Button Clicked!");
 
-    const scores = Number(document.getElementById('score').value);
 
+    // Call our function (calculateAverage) and pass in the scores array to get the average
     const average = calculateAverage(scores);
 
+
+    // Show the result in an alert (popup) 
     alert("Your average score is: " + average);
 
+    
+    // Show the result on the page
+    document.getElementById('result').textContent = "Average Score: "
+ + average;
 });
