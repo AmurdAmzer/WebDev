@@ -33,6 +33,9 @@ addScoreButton.addEventListener('click', function(e){
     // Add (push) the score to the global scores array
     scores.push(value);
 
+    // Update the scores list in the HTML to show all entered scores
+    const scoreList = document.getElementById('scoreList').textContent = "scores:" + scores.join(', ');
+
 })
 
 averageButton.addEventListener('click', function(){
