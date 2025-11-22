@@ -34,7 +34,10 @@ addScoreButton.addEventListener('click', function(e){
     scores.push(value);
 
     // Update the scores list in the HTML to show all entered scores
-    const scoreList = document.getElementById('scoreList').textContent = "scores:" + scores.join(', ');
+    const scoreList = document.getElementById('scoreList').textContent = "scores: [" + scores.join(', ') +"]";
+
+    // Clear the input after adding a score
+    document.getElementById('score').value='';
 
 })
 
