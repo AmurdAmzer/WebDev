@@ -4,25 +4,34 @@ const scores = [];
 
 // Function that accepts an array of numbers and returns the average
 function calculateAverage(scores){
-// TODO: Calculate the average of all numbers in the array
 
-let sum = 0;
-for (let i=0; i<scores.length; i++){
-    sum = sum + scores[i];
+    // Loop  through the from index 0 to the end of the array and calculate the sum of all scores
+    let sum = 0;
+    for (let i=0; i<scores.length; i++){
+        sum = sum + scores[i];
 
 }
-
-const average = sum/scores.length;
-return average;
+    // Calculate the average by dividing the sum by the number of scores and return it.
+    const average = sum/scores.length;
+    return average;
 }
 
 // Test it
 console.log(calculateAverage([80, 90, 85])); // Should print 85
 
+// Get references to the buttons (Grab the buttons by their IDs)
 const addScoreButton = document.getElementById('addScoreBtn');
 const averageButton = document.getElementById('averageBtn');
 
+
+// When addScoreButton is clicked, get the score from the input field and add it to the scores array
 addScoreButton.addEventListener('click', function(e){
+
+    //Get value from the input field with id 'score' and convert it to a number
+    const value = Number(document.getElementById('score').value);
+    
+    // Add (push) the score to the global scores array
+    scores.push(value);
 
 })
 
