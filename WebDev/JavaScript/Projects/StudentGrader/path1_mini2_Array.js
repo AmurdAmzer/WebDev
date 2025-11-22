@@ -54,7 +54,7 @@ averageButton.addEventListener('click', function(){
 
 
     // Show the result in an alert (popup) 
-    alert("Your average score is: " + average);
+    // alert("Your average score is: " + average);
 
     
     // Show the result on the page
