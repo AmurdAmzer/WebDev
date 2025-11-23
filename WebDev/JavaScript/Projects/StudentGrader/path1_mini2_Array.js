@@ -22,7 +22,7 @@ console.log(calculateAverage([80, 90, 85])); // Should print 85
 // Get references to the buttons (Grab the buttons by their IDs)
 const addScoreButton = document.getElementById('addScoreBtn');
 const averageButton = document.getElementById('averageBtn');
-const clearScores = document.getElementById('clearBtn');
+const clearButton = document.getElementById('clearBtn');
 
 
 // When addScoreButton is clicked, get the score from the input field and add it to the scores array
@@ -66,6 +66,15 @@ averageButton.addEventListener('click', function(){
 });
 
     // Clear sscores list
-    clearScores.addEventListener('click', function(){
-        scoreList.textContent = "Scores: [ ]";
+    clearButton.addEventListener('click', function(){
+        console.log("Clear Button Clicked!");
+
+        // 1.  Clear the scores array
+        scores.length = 0; // Clear the scores array
+
+        // 2. Clear the score list display
+        document.getElementById('scoreList').textContent = "Scores: [ ]";
+
+        // 3. Clear the result display
+        document.getElementById('result').textContent = "Average Score: ";
 });
