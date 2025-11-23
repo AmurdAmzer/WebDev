@@ -60,4 +60,10 @@ averageButton.addEventListener('click', function(){
     // Show the result on the page
     document.getElementById('result').textContent = "Average Score: "
  + average;
+
+    // Clear sscores list
+    const clearScores = document.getElementById('clearScores');
+    clearScores.addEventListener('click', function(){
+        scoreList.textContent = "[]";
+    })
 });
