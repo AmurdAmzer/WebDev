@@ -77,4 +77,7 @@ averageButton.addEventListener('click', function(){
 
         // 3. Clear the result display
         document.getElementById('result').textContent = "Average Score: ";
+
+        // 4. Clear the input field
+        document.getElementById('score').value='';
 });
