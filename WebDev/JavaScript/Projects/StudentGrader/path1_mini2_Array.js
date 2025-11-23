@@ -39,7 +39,7 @@ addScoreButton.addEventListener('click', function(e){
     // Clear the input after adding a score
     document.getElementById('score').value='';
 
-})
+});
 
 averageButton.addEventListener('click', function(){
     
@@ -61,9 +61,11 @@ averageButton.addEventListener('click', function(){
     document.getElementById('result').textContent = "Average Score: "
  + average;
 
+
+});
+
     // Clear sscores list
     const clearScores = document.getElementById('clearScores');
     clearScores.addEventListener('click', function(){
-        scoreList.textContent = "[]";
-    })
-});
+        scoreList.textContent = "Scores: [ ]";
+    });
