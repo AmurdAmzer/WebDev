@@ -66,7 +66,7 @@ averageButton.addEventListener('click', function(){
 
 });
 
-    // Clear sscores list
+// Clear sscores list
     clearButton.addEventListener('click', function(){
         console.log("Clear Button Clicked!");
 
