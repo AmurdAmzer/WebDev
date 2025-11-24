@@ -23,6 +23,7 @@ console.log(calculateAverage([80, 90, 85])); // Should print 85
 const addScoreButton = document.getElementById('addScoreBtn');
 const averageButton = document.getElementById('averageBtn');
 const clearButton = document.getElementById('clearBtn');
+const gradeButton = document.getElementById('gradeBtn');
 
 
 // When addScoreButton is clicked, get the score from the input field and add it to the scores array
