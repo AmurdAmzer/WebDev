@@ -1,4 +1,3 @@
-const { get } = require("lodash");
 
 // Create an empty array to store all scores entered by the user
 const scores = [];
@@ -17,24 +16,6 @@ function calculateAverage(scores){
     return average;
 }
 
-function getLetterGrade(average) {
-    let grade = '';
-    if (average >=90){
-        grade = 'A';
-    }
-    else if (average >=80 && average <90){
-        grade = 'B';
-    }
-    else if (average >=70 && average <80){
-        grade = 'C';
-    }
-    else if (average >=60 && average<70){
-        grade = 'D';
-    }
-    else if (average <60){
-        grade = 'F';
-    }
-}
 // Test it
 console.log(calculateAverage([80, 90, 85])); // Should print 85
 
@@ -42,6 +23,7 @@ console.log(calculateAverage([80, 90, 85])); // Should print 85
 const addScoreButton = document.getElementById('addScoreBtn');
 const averageButton = document.getElementById('averageBtn');
 const clearButton = document.getElementById('clearBtn');
+const gradeButton = document.getElementById('gradeBtn');
 
 
 // When addScoreButton is clicked, get the score from the input field and add it to the scores array
@@ -84,25 +66,19 @@ averageButton.addEventListener('click', function(){
 
 });
 
-gradeButton.addEventListener('click', function(){
-    console.log("Grade Button Clicked!");
+// Clear sscores list
+    clearButton.addEventListener('click', function(){
+        console.log("Clear Button Clicked!");
 
-    // 1. show grade based on average score
-    getLetterGrade(average);
-});
-    // Clear sscores list
-clearButton.addEventListener('click', function(){
-    console.log("Clear Button Clicked!");
+        // 1.  Clear the scores array
+        scores.length = 0; // Clear the scores array
 
-    // 1.  Clear the scores array
-    scores.length = 0; // Clear the scores array
+        // 2. Clear the score list display
+        document.getElementById('scoreList').textContent = "Scores: [ ]";
 
-    // 2. Clear the score list display
-    document.getElementById('scoreList').textContent = "Scores: [ ]";
+        // 3. Clear the result display
+        document.getElementById('result').textContent = "Average Score: ";
 
-    // 3. Clear the result display
-    document.getElementById('result').textContent = "Average Score: ";
-
-    // 4. Clear the input field
-    document.getElementById('score').value='';
+        // 4. Clear the input field
+        document.getElementById('score').value='';
 });
