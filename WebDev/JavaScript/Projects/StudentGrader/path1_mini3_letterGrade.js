@@ -1,5 +1,3 @@
-const { get } = require("lodash");
-
 // Create an empty array to store all scores entered by the user
 const scores = [];
 
@@ -34,6 +32,7 @@ function getLetterGrade(average) {
     else if (average <60){
         grade = 'F';
     }
+    return grade;
 }
 // Test it
 console.log(calculateAverage([80, 90, 85])); // Should print 85
@@ -42,6 +41,7 @@ console.log(calculateAverage([80, 90, 85])); // Should print 85
 const addScoreButton = document.getElementById('addScoreBtn');
 const averageButton = document.getElementById('averageBtn');
 const clearButton = document.getElementById('clearBtn');
+const gradeButton = document.getElementById('gradeBtn');
 
 
 // When addScoreButton is clicked, get the score from the input field and add it to the scores array
@@ -88,7 +88,12 @@ gradeButton.addEventListener('click', function(){
     console.log("Grade Button Clicked!");
 
     // 1. show grade based on average score
-    getLetterGrade(average);
+    const grade = getLetterGrade(calculateAverage(scores));
+
+    // 2. Show the result on the page
+    document.getElementById('grade').textContent = "Letter Grade: " + grade;
+
+
 });
     // Clear sscores list
 clearButton.addEventListener('click', function(){

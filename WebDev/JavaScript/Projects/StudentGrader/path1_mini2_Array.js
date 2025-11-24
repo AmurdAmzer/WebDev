@@ -67,18 +67,18 @@ averageButton.addEventListener('click', function(){
 });
 
 // Clear sscores list
-    clearButton.addEventListener('click', function(){
-        console.log("Clear Button Clicked!");
+clearButton.addEventListener('click', function(){
+    console.log("Clear Button Clicked!");
 
-        // 1.  Clear the scores array
-        scores.length = 0; // Clear the scores array
+    // 1.  Clear the scores array
+    scores.length = 0; // Clear the scores array
 
-        // 2. Clear the score list display
-        document.getElementById('scoreList').textContent = "Scores: [ ]";
+    // 2. Clear the score list display
+    document.getElementById('scoreList').textContent = "Scores: [ ]";
 
-        // 3. Clear the result display
-        document.getElementById('result').textContent = "Average Score: ";
+    // 3. Clear the result display
+    document.getElementById('result').textContent = "Average Score: ";
 
-        // 4. Clear the input field
-        document.getElementById('score').value='';
+    // 4. Clear the input field
+    document.getElementById('score').value='';
 });
