@@ -34,6 +34,25 @@ function getLetterGrade(average) {
     }
     return grade;
 }
+
+function gradeStudent(name, scores){
+    // TODO: 
+    // 1. Calculate average (Use calculateAverage function)
+
+
+    // 2. Get letter grade (Use getLetterGrade function)
+
+
+    // 3. Return object with name, scores, average, grade, passing status
+
+    return {
+        student: name,
+        scores: scores,
+        average: calculateAverage(scores),
+        letterGrade: getLetterGrade(calculateAverage(scores)),
+        passing: calculateAverage(scores) >= 60
+    };
+}
 // Test it
 console.log(calculateAverage([80, 90, 85])); // Should print 85
 
