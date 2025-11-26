@@ -38,10 +38,10 @@ function getLetterGrade(average) {
 function gradeStudent(name, scores){
     // TODO: 
     // 1. Calculate average (Use calculateAverage function)
-
+    const average = calculateAverage(scores);
 
     // 2. Get letter grade (Use getLetterGrade function)
-
+    const letterGrade = getLetterGrade(average);
 
     // 3. Return object with name, scores, average, grade, passing status
 
