@@ -48,9 +48,9 @@ function gradeStudent(name, scores){
     return {
         student: name,
         scores: scores,
-        average: calculateAverage(scores),
-        letterGrade: getLetterGrade(calculateAverage(scores)),
-        passing: calculateAverage(scores) >= 60
+        average: average,
+        letterGrade: getLetterGrade(average),
+        passing: average >= 60
     };
 }
 // Test it
