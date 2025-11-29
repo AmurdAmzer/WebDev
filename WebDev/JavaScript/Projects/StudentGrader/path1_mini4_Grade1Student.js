@@ -61,6 +61,7 @@ const addScoreButton = document.getElementById('addScoreBtn');
 const averageButton = document.getElementById('averageBtn');
 const clearButton = document.getElementById('clearBtn');
 const gradeButton = document.getElementById('gradeBtn');
+const gradeStudentButton = document.getElementById('gradeStudentBtn');
 
 
 // When addScoreButton is clicked, get the score from the input field and add it to the scores array
@@ -129,4 +130,18 @@ clearButton.addEventListener('click', function(){
 
     // 4. Clear the input field
     document.getElementById('score').value='';
+});
+
+gradeStudentButton.addEventListener('click', function(){
+    console.log("Grade Student Button Clicked!");
+
+    // 1. Get student name from input field with id 'studentName'
+    const studentName = document.getElementById('studentName').value;
+
+    // 2. Call gradeStudent function with name and scores array
+    const studentReport = gradeStudent(studentName, scores);
+
+    // 3. Show the result on the page
+    document.getElementById('studentReport').textContent = 
+    `Student: ${studentReport.student}, Scores: [${studentReport.scores.join(', ')}], Average: ${studentReport.average}, Letter Grade: ${studentReport.letterGrade}, Passing: ${studentReport.passing}`;
 });
