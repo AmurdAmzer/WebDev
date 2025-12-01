@@ -139,9 +139,8 @@ gradeStudentButton.addEventListener('click', function(){
     const studentName = document.getElementById('studentName').value;
 
     // 2. Call gradeStudent function with name and scores array
-    const studentReport = gradeStudent(studentName, scores);
+    const studentReport = gradeStudent('Alice', scores);
 
     // 3. Show the result on the page
-    document.getElementById('studentReport').textContent = 
-    `Student: ${studentReport.student}, Scores: [${studentReport.scores.join(', ')}], Average: ${studentReport.average}, Letter Grade: ${studentReport.letterGrade}, Passing: ${studentReport.passing}`;
-});
+    document.getElementById('studentReport').textContent = JSON.stringify(studentReport, null, 2);
+    });
