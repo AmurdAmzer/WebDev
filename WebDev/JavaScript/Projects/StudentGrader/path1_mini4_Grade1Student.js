@@ -133,6 +133,8 @@ clearButton.addEventListener('click', function(){
 });
 
 gradeStudentButton.addEventListener('click', function(){
+
+    // why is it still not working???
     console.log("Grade Student Button Clicked!");
 
     // 1. Get student name from input field with id 'studentName'
