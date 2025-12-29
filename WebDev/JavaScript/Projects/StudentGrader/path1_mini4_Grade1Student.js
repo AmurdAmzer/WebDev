@@ -56,7 +56,7 @@ function gradeStudent(name, scores){
 // Test it
 console.log(calculateAverage([80, 90, 85])); // Should print 85
 
-// Get references to the buttons (Grab the buttons by their IDs)....
+// Get references to the buttons (Grab the buttons by their IDs)...
 const addScoreButton = document.getElementById('addScoreBtn');
 const averageButton = document.getElementById('averageBtn');
 const clearButton = document.getElementById('clearBtn');
